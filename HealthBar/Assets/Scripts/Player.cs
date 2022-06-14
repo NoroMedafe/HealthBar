@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
         _currentHealth += health;
 
         if (_currentHealth >= 100)
-            _currentHealth = 0;
+            _currentHealth = 100;
 
         healthBar.SetHealth(_currentHealth);
     }
