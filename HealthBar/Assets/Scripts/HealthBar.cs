@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthBar : MonoBehaviour
+public class HealthBar : Bar
 {
-    [SerializeField] private Slider slider;
-  
-    public void SetMaxHealth(int health)
+    [SerializeField] private Player _player;
+
+    private void OnEnable()
     {
-        slider.maxValue = health;
-        slider.value = health;
+        _player.HealthChanged += OnValueChanged;
+        Slider.value = 1;
+
     }
-    public void SetHealth(int health)
+    private void OnDisable()
     {
-        slider.value = health;
+        _player.HealthChanged -= OnValueChanged;
+
     }
-   
-    
 }
