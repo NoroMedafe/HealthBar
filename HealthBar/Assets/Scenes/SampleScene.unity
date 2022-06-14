@@ -733,7 +733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Slider: {fileID: 414523589}
-  _speed: 0.02
+  _speed: 0.2
   _player: {fileID: 100300166}
 --- !u!1 &1058992629
 GameObject:
